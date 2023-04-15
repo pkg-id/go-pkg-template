@@ -40,3 +40,11 @@ repos:
         language: golang
         files: '\.go$'
         stages: ['commit']
+
+      - id: go-coverage
+        name: code coverage
+        entry: scripts/go-coverage.sh
+        language: golang
+        stages: [ 'commit' ]
+        args:
+          - "85"
